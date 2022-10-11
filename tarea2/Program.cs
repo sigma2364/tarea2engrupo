@@ -14,20 +14,28 @@ namespace tarea2
         static void Main(string[] args)
 
         {
+            #region Instancias
             //instanciamos las clases
 
             promediodenotas objnotas = new promediodenotas();
-            
+
             calcularporsentajedeventa objporsentaje = new calcularporsentajedeventa();
-           
 
+            salario objSalario = new salario();
 
+            Terreno objTerreno = new Terreno();
+
+            #endregion
+
+            #region variables
             //variables
             int opc = 0;
-            double  nota1, nota2, nota3, cod,  P_costo;
+            double nota1, nota2, nota3, cod, P_costo, min, pagoHora, largo, ancho;
+            string nombre, ced;
 
+            #endregion
 
-
+                    
             while (opc != 8) //Menu de opciones
             {
                 try
@@ -59,15 +67,51 @@ namespace tarea2
                             break;
                         case 3:
 
+                            Console.WriteLine("Ingrese le nombre y apellidos del colaborador");
+                            nombre = Console.ReadLine();                            
+                            Console.WriteLine("Digite la cedula");
+                            ced = Console.ReadLine();
+                            Console.WriteLine("Ingrese el tiempo laborado, en minutos");
+                            min = double.Parse(Console.ReadLine());
+                            Console.WriteLine("Digite el monto por hora a pagar");
+                            pagoHora =double.Parse(Console.ReadLine());
 
-
+                            Console.WriteLine("Nombre: " + nombre + "\nCédula: " + ced);
+                            Console.WriteLine("Salario Bruto: " + objSalario.salarioBruto(min,pagoHora));
+                            Console.WriteLine("Seguro Social 9%: " + objSalario.totalDeucciones());
+                            Console.WriteLine("Salario Neto a pagar: " + objSalario.salarioNeto());
+                            Console.WriteLine("\n*********************************************************" +
+                                              "\n*Muchas gracias !! Digite cualquier tecla para continuar*" +
+                                              "\n*********************************************************");
+                            Console.ReadKey();
                             break;
                         case 4:
+
+                            Console.WriteLine("Ingrese el valor del largo del terreno en metros");
+                            largo = Double.Parse(Console.ReadLine());
+                            Console.WriteLine("Ingrese el valor del ancho del terreno en metros");
+                            ancho = Double.Parse(Console.ReadLine());
+                            Console.WriteLine("El area de su terreno es: " + objTerreno.calculaArea(largo, ancho) + " m2");
+                            Console.WriteLine(objTerreno.validarTerreno());
+                            Console.WriteLine("\n*********************************************************" +
+                                              "\n*Muchas gracias !! Digite cualquier tecla para continuar*" +
+                                              "\n*********************************************************");
+                            Console.ReadKey();
 
                             break;
                         case 5:
 
-                           
+                            Console.WriteLine("Ingrese el valor del largo del terreno en metros");
+                            largo = Double.Parse(Console.ReadLine());
+                            Console.WriteLine("Ingrese el valor del ancho del terreno en metros");
+                            ancho = Double.Parse(Console.ReadLine());
+                            Console.WriteLine("El area de su terreno es: " + objTerreno.calculaArea(largo, ancho) + " m2");
+                            Console.WriteLine(objTerreno.validarTerreno(largo, ancho));
+                            Console.WriteLine("\n*********************************************************" +
+                                              "\n*Muchas gracias !! Digite cualquier tecla para continuar*" +
+                                              "\n*********************************************************");
+                            Console.ReadKey();
+
 
                             break;
                         case 6:
@@ -76,7 +120,7 @@ namespace tarea2
                             nota1 = double.Parse(Console.ReadLine());
                             Console.Write("Ingrese la Segunda nota:");
                             nota2 = double.Parse(Console.ReadLine());
-                            Console.Write("Ingrese la Treser nota:");
+                            Console.Write("Ingrese la Tercer nota:");
                             nota3 = double.Parse(Console.ReadLine());
 
 
@@ -99,9 +143,9 @@ namespace tarea2
                             break;
                         case 7:
 
-                            Console.Write("Ingrese El codigo del articulo:");
+                            Console.Write("Ingrese el codigo del articulo:");
                             cod = double.Parse(Console.ReadLine());
-                            Console.Write("Ingrese El precio del articulo:");
+                            Console.Write("Ingrese el precio del articulo:");
                             P_costo = double.Parse(Console.ReadLine());
 
 
@@ -109,15 +153,15 @@ namespace tarea2
 
                             if (P_costo < 60)
                             {
-                                Console.Write("Su Precio de costo es:  " + P_costo + "\nSu Precio de venta final es:  " + P_venta + "\nel codigo del producto es es: " + cod + " La ganacia es del 50% ");
+                                Console.Write("Su precio de costo es:  " + P_costo + "\nSu precio de venta final es:  " + P_venta + "\nel codigo del producto es es: " + cod + " La ganacia es del 50% ");
                             }
                             if (P_costo >= 60 == P_costo <= 150)
                             {
-                                Console.Write("Su Precio de costo es:  " + P_costo + "\nSu Precio de venta final es:  " + P_venta + "\nel codigo del producto es es: " + cod + " La ganacia es del 35% ");
+                                Console.Write("Su precio de costo es:  " + P_costo + "\nSu precio de venta final es:  " + P_venta + "\nel codigo del producto es es: " + cod + " La ganacia es del 35% ");
                             }
                             if (P_costo >= 151)
                             {
-                                Console.Write("Su Precio de costo es:  " + P_costo + "\nSu Precio de venta final es:  " + P_venta + "\nel codigo del producto es es: " + cod + " La ganacia es del 25% ");
+                                Console.Write("Su precio de costo es:  " + P_costo + "\nSu precio de venta final es:  " + P_venta + "\nel codigo del producto es es: " + cod + " La ganacia es del 25% ");
                             }
 
                             Console.ReadKey();
