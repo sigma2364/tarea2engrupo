@@ -41,6 +41,14 @@ namespace tarea2
             double cant_kilometros;
             double calculotransporte;
 
+            // instancia del ejericio01 
+            Matricula eje1 = new Matricula();
+            int materiaspracticas = 0;
+            int materiasteoricas = 0;
+            double montoTotal = 0;
+
+
+
             #endregion
 
 
@@ -64,6 +72,33 @@ namespace tarea2
                     switch (opc)
                     {
                         case 1:
+
+                            Console.WriteLine("Número de cédula :");
+                            eje1._cedula = Console.ReadLine();
+                            Console.WriteLine("Nombre");
+                            eje1.Nombre = Console.ReadLine();
+                            Console.WriteLine("Apellido");
+                            eje1.Apellido = Console.ReadLine();
+                            Console.WriteLine("Cantidad de Materias Practicas");
+                            materiaspracticas = Convert.ToInt32(Console.ReadLine());
+                            Console.WriteLine("CanTidad de materias Teoricas");
+                            materiasteoricas = Convert.ToInt32(Console.ReadLine());
+                            eje1.CalculoMateirasPracticas(materiaspracticas);
+                            eje1.CalculoMateriasTeoricas(materiasteoricas);
+                            montoTotal = eje1.CalculoTotal();
+
+
+                            Console.WriteLine("**********************************");
+                            Console.WriteLine(eje1._cedula);
+                            Console.WriteLine(eje1.Nombre);
+                            Console.WriteLine(eje1.Apellido);
+                            Console.WriteLine(materiasteoricas);
+                            Console.WriteLine(materiaspracticas);
+                            //Console.WriteLine(eje1.Cant_materiaspracticas);
+                            //Console.WriteLine(eje1.Cant_materiasteoricas);
+                            Console.WriteLine(montoTotal);
+                            Console.WriteLine("**********************************");
+                            Console.ReadKey();
 
 
 
