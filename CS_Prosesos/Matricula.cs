@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace CS_Prosesos
 {
-    internal class Matricula
+    public class Matricula
     {
+
+
+
+
+
+
+
     }
 }

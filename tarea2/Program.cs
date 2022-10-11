@@ -34,9 +34,16 @@ namespace tarea2
             double nota1, nota2, nota3, cod, P_costo, min, pagoHora, largo, ancho;
             string nombre, ced;
 
+            //instancia ejercicio2
+            PesoKilos eje2 = new PesoKilos();
+            double pesokilos;
+            double valor_aproxpaquete;
+            double cant_kilometros;
+            double calculotransporte;
+
             #endregion
 
-                    
+
             while (opc != 8) //Menu de opciones
             {
                 try
@@ -63,7 +70,19 @@ namespace tarea2
                             break;
                         case 2:
 
+                            Console.WriteLine("Digite el peso el kilos   ");
+                            pesokilos = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine("Digite el valor aproximado del paquete   ");
+                            valor_aproxpaquete = Convert.ToDouble(Console.ReadLine());
+                            Console.WriteLine(" Digite la cantidad de Kilómetros  ");
+                            cant_kilometros = Convert.ToDouble(Console.ReadLine());
 
+
+
+
+                            calculotransporte = eje2.Calculocostotransporte(pesokilos, valor_aproxpaquete, cant_kilometros);
+                            Console.WriteLine($"El costo del transporte es   {calculotransporte}");
+                            Console.ReadKey();
 
                             break;
                         case 3:
