@@ -22,11 +22,19 @@ namespace CS_Prosesos
         private double costo_materiaspractica;
 
 
-
         #endregion
+        // hola compañeros un gusto saludarlos
+
+
+
+
+
+
+
+
 
         #region propiedades   
-        //las propiedades sirven para reflejar en la siguiente capa
+       
         public string _cedula
         {
             get { return cedula; }
@@ -75,17 +83,7 @@ namespace CS_Prosesos
             set { costomatri = value; }
         }
 
-        //public double Costo_materiasteoica
-        //{
-        //    get { return Costo_materiasteoica; }
-        //    set { Costo_materiasteoica = value; }
-        //}
-
-        //public double _Costo_materiaspractica
-        //{
-        //    get { return costomatri; }
-        //    set { costomatri = value; }
-        //}
+      
 
 
         #endregion
