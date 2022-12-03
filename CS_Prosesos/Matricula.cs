@@ -29,6 +29,7 @@ namespace CS_Prosesos
                //Hola
            // HOLA companeros de Teoria de sistemas
 
+
         #region propiedades   
        
         public string _cedula
