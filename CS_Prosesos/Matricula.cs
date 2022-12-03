@@ -34,7 +34,7 @@ namespace CS_Prosesos
             //Hola 3
             //hola 4
            //Hola5 sabado 03 - 12 - 2022
-
+           //Buenas tardes 15:37 3/12/2022
 
 
         #region propiedades   
