@@ -27,15 +27,7 @@ namespace CS_Prosesos
                //saludos 12/2/2022 Herbert 
                //saludos Santiago
                //Hola
-
-
-
-            //Hola2
-            //Hola 3
-            //hola 4
-           //Hola5 sabado 03 - 12 - 2022
-           //Buenas tardes 15:37 3/12/2022
-
+           // HOLA companeros de Teoria de sistemas
 
         #region propiedades   
        
